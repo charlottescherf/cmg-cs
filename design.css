@@ -4,6 +4,16 @@ body {
 
 }
 
+.header {
+    height: 15vh;
+}
+
+.header .logo {
+    height: 7.5;
+    margin-left: 10vw;
+
+}
+
 h1 {
     color: beige;
     
