@@ -30,7 +30,7 @@ a:hover {
 .mainnavi{
     width: 60vw;
     height: 15vh;
-    margin: auto auto;
+   
     display: flex;
     align-items: center;
     margin-top: 5vh;
