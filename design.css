@@ -19,10 +19,7 @@ a {
 
 .header {
     height: 75vh;
-    background-image: url(img/pexels-anni-roenkae-2832432.jpg);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+  
 
 }
 
@@ -31,8 +28,7 @@ a {
     height: 15vh;
     margin: auto auto;
     display: flex;
-    align-items: center center;
-    text-align: center center;
+    align-items: center;
     margin-top: 5vh;
       
 }
