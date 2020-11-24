@@ -17,6 +17,10 @@ a {
     margin-left: 10vw;
 }
 
+a:hover {
+    border-bottom: 2px white solid;
+}
+
 .header {
     height: 75vh;
   
