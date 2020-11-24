@@ -1,15 +1,34 @@
 body {
     color: floralwhite;
+    font-family: Helvetica, sans-serif;
+    
 
 
 }
+
+*{box-sizing: border-box;}
+
+
 
 .header {
-    height: 15vh;
+    height: 60vh;
+    background-image: url(pexels-anni-roenkae-2832432.jpg);
+    background-size: cover;
+    background-position: top;
+
 }
 
+.mainnavi{
+    width: 60vw;
+    height: 15vh;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+}
+
+
 .logo {
-    height: 7vh;
+    width: 7vw;
     margin-left: 10vw;
 
 }
