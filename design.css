@@ -1,5 +1,5 @@
 body {
-    color: floralwhite;
+    color: black;
     font-family: Helvetica, sans-serif;
     
 
@@ -28,7 +28,7 @@ a {
     margin: auto auto;
     display: flex;
     align-items: center;
-    background-color: green;
+    
     
 }
 
