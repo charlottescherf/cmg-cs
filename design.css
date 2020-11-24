@@ -8,13 +8,17 @@ body {
 
 *{box-sizing: border-box;}
 
-
+a {
+    color: floralwhite;
+    text-decoration: none;
+}
 
 .header {
     height: 60vh;
     background-image: url(pexels-anni-roenkae-2832432.jpg);
     background-size: cover;
     background-position: top;
+    background-repeat: no-repeat;
 
 }
 
@@ -24,6 +28,7 @@ body {
     margin: auto auto;
     display: flex;
     align-items: center;
+    
 }
 
 
