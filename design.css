@@ -63,8 +63,8 @@ h1 {
 }
 
 .main {
-    background-color: beige;
+    background-color: white;
     height: 25vh;
     width: 100vw;
-    
+    left: 0;
 }
