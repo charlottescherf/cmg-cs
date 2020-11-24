@@ -11,6 +11,7 @@
 a {
     color: floralwhite;
     text-decoration: none;
+    margin-left: 10vw;
 }
 
 .header {
@@ -28,7 +29,8 @@ a {
     margin: auto auto;
     display: flex;
     align-items: center center;
-    text-align: center;
+    text-align: center center;
+    margin-top: 5vh;
       
 }
 
