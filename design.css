@@ -32,7 +32,7 @@ a:hover {
     width: 60vw;
     height: 10vh;
     display: flex;
-    align-items: center;
+    align-items: center center;
     padding-top: 4vh;
       
 }
