@@ -16,10 +16,12 @@ a {
     text-decoration: none;
     margin-left: 5vw;
     align-items: center;
+    transition-duration: 0.5;
 }
 
 a:hover {
     border-bottom: 2px white solid;
+    transition-duration: 0.25;
 }
 
 .header {
@@ -51,10 +53,8 @@ a:hover {
     text-align: left;
     position: absolute;
     right: 15vw;
+    bottom: 20vh;
     
-
-    
-
 }
 
 h1 {
