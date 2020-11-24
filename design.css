@@ -14,7 +14,7 @@
 a {
     color: floralwhite;
     text-decoration: none;
-    margin-left: 10vw;
+    margin-left: 5vw;
 }
 
 a:hover {
@@ -30,7 +30,6 @@ a:hover {
 .mainnavi{
     width: 60vw;
     height: 15vh;
-   
     display: flex;
     align-items: center;
     margin-top: 5vh;
