@@ -1,5 +1,5 @@
 .body {
-    color: black;
+    color: white;
     font-family: Helvetica, sans-serif;
     background-image: url(img/pexels-anni-roenkae-2832432.jpg);
     background-size: cover;
@@ -47,7 +47,7 @@ a:hover {
 }
 
 .text1 {
-    width: 40vw;
+    width: 35vw;
     text-align: left;
     position: absolute;
     right: 15vw;
