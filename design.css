@@ -29,9 +29,9 @@ a:hover {
 
 .mainnavi{
     width: 60vw;
-    height: 15vh;
+    height: 10vh;
     display: flex;
-    align-items: center;
+    align-items: center center;
     margin-top: 5vh;
       
 }
