@@ -24,7 +24,6 @@ a:hover {
 
 .header {
     height: 75vh;
-    position: relative;
   
 
 }
@@ -35,8 +34,7 @@ a:hover {
     display: flex;
     align-items: center center;
     padding-top: 4vh;
-    left: 20%;
-    position: absolute;
+    margin-left: 10vw;
       
 }
 
@@ -48,7 +46,7 @@ a:hover {
 }
 
 .text1 {
-
+    
 
 }
 
