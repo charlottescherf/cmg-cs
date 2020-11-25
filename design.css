@@ -50,8 +50,8 @@ a:hover {
 
 .logo {
     width: 7vw;
-
-
+    position: absolute;
+    left: 5vw;
 }
 
 .text1 {
@@ -69,8 +69,12 @@ h1 {
 }
 
 .main {
-    background-color: white;
     height: 25vh;
     width: 100vw;
     left: 0;
+}
+
+.bg {
+    background-color: white;
+    
 }
