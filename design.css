@@ -31,7 +31,7 @@ a:hover {
 }
 
 .header {
-    height: 70vh;
+    height: 65vh;
     position: relative;
   
 
@@ -59,21 +59,25 @@ a:hover {
     width: 35vw;
     text-align: left;
     position: absolute;
-    right: 10vw;
-    bottom: 20vh;
+    right: 30vw;
+    bottom: 10vh;
     
 }
 
 h1 {
     color: white;
+    text-size-adjust: 10vh;
     
 }
 
 .main {
-    height: 30vh;
-    width: 100vw;
     left: 0;
     color: skyblue;
+    width: 35vw;
+    text-align: left;
+    position: absolute;
+    right: 30vw;
+    bottom: 10vh;
 }
 
 .bg {
@@ -84,8 +88,8 @@ h1 {
 
 .handy {
     position: absolute;
-    height: 80vh;
-    left: 30vw;
-    top: 20vh;
+    height: 90vh;
+    left: 20vw;
+    top: 10vh;
 
 }
