@@ -49,7 +49,7 @@ a:hover {
 
 
 .logo {
-    width: 7vw;
+    width: 5vw;
     position: absolute;
     left: 2vw;
     top: 0;
@@ -73,6 +73,7 @@ h1 {
     height: 30vh;
     width: 100vw;
     left: 0;
+    color: skyblue;
 }
 
 .bg {
@@ -83,7 +84,8 @@ h1 {
 
 .handy {
     position: absolute;
-    height: 60vh;
+    height: 80vh;
     left: 30vw;
-    
+    top: 20vh;
+
 }
