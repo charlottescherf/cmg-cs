@@ -27,11 +27,11 @@ a {
 
 a:hover {
     border-bottom: 2px white solid;
-    transition-duration: 0.25;
+    transition-duration: 0.5;
 }
 
 .header {
-    height: 75vh;
+    height: 70vh;
     position: relative;
   
 
@@ -51,7 +51,8 @@ a:hover {
 .logo {
     width: 7vw;
     position: absolute;
-    left: 5vw;
+    left: 2vw;
+    top: 0;
 }
 
 .text1 {
@@ -69,12 +70,20 @@ h1 {
 }
 
 .main {
-    height: 25vh;
+    height: 30vh;
     width: 100vw;
     left: 0;
 }
 
 .bg {
     background-color: white;
+    margin: 0%;
+    box-sizing: border-box;   
+}
+
+.handy {
+    position: absolute;
+    height: 60vh;
+    left: 30vw;
     
 }
