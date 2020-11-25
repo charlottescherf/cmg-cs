@@ -71,7 +71,7 @@ h1 {
 }
 
 .main {
-    color: rgb(168, 176, 247);
+    color: rgb(205, 210, 255);
     width: 35vw;
     text-align: center;
     position: absolute;
@@ -92,5 +92,5 @@ h1 {
     height: 75vh;
     left: 20vw;
     top: 10vh;
-
 }
+
