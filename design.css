@@ -16,43 +16,54 @@
 
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    margin-left: 5vw;
-    align-items: center;
-    transition-duration: 0.5;
-}
-
-a:hover {
-    border-bottom: 2px white solid;
-    transition-duration: 0.5;
-}
 
 .header {
     height: 65vh;
     position: relative;
-    display: flex;
-  
 }
 
+
+/******* Alles Style der Main Navi *****/ 
 .mainnavi{
-    width: 60vw;
-    height: 10vh;
     display: flex;
-    align-items: center center;
-    padding-top: 4vh;
-    margin-left: 10vw;
-      
+    align-items: center;
+    justify-content: space-around; /* das verteilt die elemente gleichm */
+    padding-top: 1vw;
+}
+
+.mainnavi a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.5;
+    padding: 1vw;
+
+}
+.mainnavi a:hover {
+    border-bottom: 2px white solid;
+    transition-duration: 0.5;
+}
+
+.mainnavi .signup {
+    border: 2px white solid;
+    border-radius: 0.5vw;
+}
+
+.mainnavi .signup:hover {
+background-color: white;
+color: rgb(129, 23, 182);
+}
+
+.mainnavi .logo {
+    width: 3vw;
 }
 
 
-.logo {
-    width: 5vw;
-    position: absolute;
-    left: 2vw;
-    top: 0;
-}
+
+
+/******* End of Main Navi *****/ 
+
+
+
 
 .text1 {
     width: 30vw;
@@ -95,13 +106,7 @@ h1 {
     
 }
 
-.button{
-    display: block;
-    background-color: none;
-    border: white solid;
 
-
-}
 
 .logo2 {
     position: center center;
