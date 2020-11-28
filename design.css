@@ -95,6 +95,10 @@ h1 {
 }
 
 .button{
+    display: block;
+    background-color: none;
+    border: white solid;
+
 
 }
 
