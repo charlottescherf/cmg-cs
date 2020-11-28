@@ -59,7 +59,7 @@ a:hover {
     position: absolute;
     right: 20vw;
     bottom: 25vh;
-    flex: 1;
+    
     
 }
 
@@ -91,7 +91,7 @@ h1 {
     height: 75vh;
     left: 20vw;
     top: 10vh;
-    flex: 2;
+    
 }
 
 .button{
