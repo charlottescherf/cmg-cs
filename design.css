@@ -79,7 +79,8 @@ h1 {
 }
 
 .bg {
-    background-color: white;
+    background-image: url(img/bg.jpg);
+    background-position: center top;
     height: 40vh;
     margin: 0%;
     box-sizing: border-box;   
@@ -90,9 +91,4 @@ h1 {
     height: 75vh;
     left: 20vw;
     top: 10vh;
-}
-
-.bg {
-    background-image: url(img/bg.jpg);
-    background-position: center top;
 }
