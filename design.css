@@ -29,7 +29,7 @@ a:hover {
 }
 
 .header {
-    height: 70vh;
+    height: 65vh;
     position: relative;
     display: flex;
   
@@ -81,7 +81,7 @@ h1 {
 
 .bg {
     border-top: white solid 1px;
-    height: 40vh;
+    height: 35vh;
     margin: 0%;
     box-sizing: border-box;   
 }
@@ -101,7 +101,7 @@ h1 {
 .logo2 {
     position: center center;
     width: 5vw;
-    
+
 }
 
 @media (orientation:portrait)
