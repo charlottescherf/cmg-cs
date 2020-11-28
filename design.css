@@ -98,6 +98,12 @@ h1 {
 
 }
 
+.logo2 {
+    position: center center;
+    width: 5vw;
+    
+}
+
 @media (orientation:portrait)
     {
         .header {flex-direction: column;}
