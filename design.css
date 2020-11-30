@@ -34,27 +34,30 @@
 .mainnavi a {
     color: white;
     text-decoration: none;
-    transition-duration: 0.5;
+    transition-duration: 0.5s;
     padding: 1vw;
-
 }
+
 .mainnavi a:hover {
     border-bottom: 2px white solid;
-    transition-duration: 0.5;
+    transition-duration: 0.75s;
 }
 
 .mainnavi .signup {
     border: 2px white solid;
     border-radius: 0.5vw;
+    transition-duration: 0.5s;
 }
 
 .mainnavi .signup:hover {
-background-color: white;
-color: rgb(129, 23, 182);
+    background-color: white;
+    color: rgb(109, 112, 236);
+    transition-property: all;
+    transition-duration: 0.75s;
 }
 
 .mainnavi .logo {
-    width: 3vw;
+    width: 5vw;
 }
 
 
@@ -67,19 +70,52 @@ color: rgb(129, 23, 182);
 
 .text1 {
     width: 30vw;
+    height: 30vh;
     text-align: left;
     position: absolute;
     right: 20vw;
-    bottom: 25vh;
-    
+    bottom: 10vh;
     
 }
 
 h1 {
     color: white;
-    text-size-adjust: 20vh;
+    font-size: 20pt;  
+}
+
+p{font-size: 10pt;
+    margin-bottom: 5vh;
+}
+
+
+.download{
+    border: 2px white solid;
+    border-radius: 0.5vw;
+    transition-duration: 0.5s;
+    height: 5vh;
+    padding: 1vw;
+    color: white;
+    text-decoration: none;
+    margin-top: 5vh;
     
 }
+
+.download:hover {
+    background-color: white;
+    color: rgb(109, 112, 236);
+    transition-property: all;
+    transition-duration: 0.75s;
+}
+
+.handy {
+    position: absolute;
+    height: 75vh;
+    left: 20vw;
+    top: 10vh;
+}
+
+
+/********** alle styles zu main ***********/
 
 .main {
     color: white;
@@ -92,21 +128,16 @@ h1 {
 }
 
 .bg {
-    border-top: white solid 1px;
+    border-top: white 1px solid;
     height: 35vh;
     margin: 0%;
     box-sizing: border-box;   
 }
 
-.handy {
-    position: absolute;
-    height: 75vh;
-    left: 20vw;
-    top: 10vh;
-    
+
+.text2{
+    color: white;
 }
-
-
 
 .logo2 {
     position: center center;
