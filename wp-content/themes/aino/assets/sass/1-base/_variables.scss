@@ -1,0 +1,67 @@
+/* Colour Variables */
+$color__primary      : #4D2CF0;
+$color__text_one     : #111111;
+$color__text_two     : #222222;
+$color__border       : #111111;
+$color__background   : #f7f7ff;
+$color__success      : #19d37b;
+$color__notification : #1E90FF;
+$color__error        : #e52424;
+$color__code_one     : #b2cacd;
+$color__code_two     : #062e32;
+$color__black        : #000000;
+$color__white        : #ffffff;
+$color__white_60     : rgba(255, 255, 255, 0.6);
+
+/* Fonts */
+$font__heading       : 'IBM Plex Sans', sans-serif;
+$font__body          : 'IBM Plex Sans', sans-serif;
+$font__code          : 'Monaco', 'Courier 10 Pitch', Courier, monospace;
+
+/* Spacing */
+$s-0                 : 0;
+$s-1                 : 0.25rem;
+$s-2                 : 0.5rem;
+$s-3                 : 0.75rem;
+$s-4                 : 1rem;
+$s-5                 : 1.25rem;
+$s-6                 : 1.5rem;
+$s-7                 : 2rem;
+$s-8                 : 2.5rem;
+$s-9                 : 3rem;
+$s-10                : 4rem;
+$s-11                : 5rem;
+$s-12                : 6rem;
+$s-13                : 7.5rem;
+$s-14                : 9rem;
+$s-15                : 11rem;
+$s-16                : 13rem;
+$s-17                : 15.5rem;
+$s-18                : 18rem;
+
+/* Spacing Header Bar */
+$stickyheader-mobile : 3.438rem; // 55px
+$stickyheader-desktop: 5.5rem; // 88px
+
+/* Grid Columns */
+$col1                : 7.75rem; // 1 grid column
+$col2                : 15.5rem; // 2 grid column
+$col3                : 23.25rem;
+$col4                : 31rem;
+$col5                : 38.75rem;
+$col6                : 46.5rem;
+$col7                : 54.25rem;
+$col8                : 62rem;
+$col9                : 69.75rem;
+$col10               : 77.5rem;
+$col11               : 85.25rem;
+$col12               : 93rem;
+
+$default-content-width: 43.5rem;
+$wide-content-width     : 87rem;
+
+/* Border Radius */
+$border-radius-s     : 1.5rem; // 24px
+$border-radius-m     : 2.25rem; // 36px
+$border-radius-l     : 2.625rem; // 42px
+$border-radius-circle: 6.25rem; // 100px

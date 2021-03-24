@@ -1,0 +1,1107 @@
+/*!
+ Editor Styles
+*/
+
+/* Includes */
+
+@import "1-base/variables";
+@import "1-base/mixins";
+
+/* Structure */
+.wp-block {
+	max-width: $default-content-width;
+}
+
+.editor-styles-wrapper {
+	text-rendering: optimizeLegibility;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	padding: 0 !important;
+
+	.wp-block[data-align="wide"] .wp-block[data-align="wide"],
+	.wp-block[data-align="full"] .wp-block[data-align="wide"] {
+		max-width: $col12;
+	}
+}
+
+.wp-block[data-align="full"] {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.wp-block[data-align="full"] .wp-block[data-align="wide"] {
+	padding-left: $s-6;
+	padding-right: $s-6;
+
+	@include breakpoint(xl) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.wp-block .wp-block[data-type="core/group"]:not([data-align="full"]):not([data-align="wide"]):not([data-align="left"]):not([data-align="right"]),
+.wp-block .wp-block[data-type="core/cover"]:not([data-align="full"]):not([data-align="wide"]):not([data-align="left"]):not([data-align="right"]) {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Inner blocks of wide and full aligned blocks
+.wp-block[data-align="full"] .wp-block[data-type="core/group"]:not([data-align="full"]):not([data-align="wide"]),
+.wp-block[data-align="wide"] .wp-block[data-type="core/group"]:not([data-align="full"]):not([data-align="wide"]) {
+	max-width: 100%;
+}
+
+*[data-align="right"] .wp-block-edit,
+*[data-align="left"] .wp-block-edit {
+	max-width: 50%;
+}
+
+.wp-block[data-align="wide"],
+.wp-block.alignwide {
+	max-width: $col12;;
+
+	.wp-block {
+		max-width: $wide-content-width;
+	}
+}
+
+.wp-block[data-align="full"],
+.wp-block.alignfull {
+	max-width: none;
+
+	.wp-block {
+		max-width: 100%;
+	}
+}
+
+.tpl-fullwidth .wp-block {
+	max-width: $wide-content-width;
+}
+
+.wp-block {
+	.tpl-fullwidth & {
+		max-width: $wide-content-width;
+	}
+}
+
+.editor-styles-wrapper .wp-block[data-align="right"] {
+	margin-right: 0;
+}
+
+.editor-styles-wrapper .wp-block[data-align="left"] {
+	margin: 0;
+}
+
+.editor-styles-wrapper .wp-block[data-align="left"],
+.editor-styles-wrapper .wp-block[data-align="right"] {
+	margin: 0 auto;
+	max-width: $wide-content-width !important;
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+	max-width: $wide-content-width;
+	@include outer-margins;
+}
+
+/* Typography */
+body {
+	@include font-body;
+	color: $color__text_two;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Headings */
+.editor-post-title .editor-post-title__input {
+	@include font-body;
+	line-height: 1;
+	text-align: center;
+	max-width: $col10;
+}
+
+.editor-post-title__input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color__text_one;
+	font-weight: normal;
+	line-height: 1;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	& a {
+		color: $color__text_one;
+		text-decoration: none;
+	}
+}
+
+.h-bold .editor-post-title__input,
+.h-bold h1,
+.h-bold h2,
+.h-bold h3,
+.h-bold h4,
+.h-bold h5,
+.h-bold h6 {
+	font-weight: bold;
+}
+
+
+h1.has-xxxxl-font-size {
+	@include font-h-12;
+}
+
+h1.has-xxxl-font-size,
+h2.has-xxxxl-font-size {
+	@include font-h-11;
+}
+
+h1.has-xxl-font-size,
+h2.has-xxxl-font-size,
+h3.has-xxxxl-font-size {
+	@include font-h-10;
+}
+
+h1.has-xl-font-size,
+h2.has-xxl-font-size,
+h3.has-xxxl-font-size,
+h4.has-xxxxl-font-size {
+	@include font-h-9;
+}
+
+h1.has-l-font-size,
+h2.has-xl-font-size,
+h3.has-xxl-font-size,
+h4.has-xxxl-font-size,
+h5.has-xxxxl-font-size {
+	@include font-h-8;
+}
+
+.editor-post-title__input,
+h1.has-m-font-size,
+h2.has-l-font-size,
+h3.has-xl-font-size,
+h4.has-xxl-font-size,
+h5.has-xxxl-font-size,
+h6.has-xxxxl-font-size {
+	@include font-h-7;
+}
+
+h1,
+h1.has-s-font-size,
+h2.has-m-font-size,
+h3.has-l-font-size,
+h4.has-xl-font-size,
+h5.has-xxl-font-size,
+h6.has-xxxl-font-size {
+	@include font-h-6;
+}
+
+h2,
+h1.has-xs-font-size,
+h2.has-s-font-size,
+h3.has-m-font-size,
+h4.has-l-font-size,
+h5.has-xl-font-size,
+h6.has-xxl-font-size {
+	@include font-h-5;
+}
+
+h3,
+h1.has-xxs-font-size,
+h2.has-xs-font-size,
+h3.has-s-font-size,
+h4.has-m-font-size,
+h5.has-l-font-size,
+h6.has-xl-font-size,
+.related-wrap .section-title,
+.comments-area .comments-title {
+	@include font-h-4;
+}
+
+h2.has-xxs-font-size,
+h3.has-xs-font-size,
+h4,
+h4.has-s-font-size,
+h5.has-m-font-size,
+h6.has-l-font-size,
+h1.site-title,
+.site-title {
+	@include font-h-3;
+}
+
+h3.has-xxs-font-size,
+h4.has-xs-font-size,
+h5,
+h5.has-s-font-size,
+h6.has-m-font-size {
+	@include font-h-2;
+}
+
+h4.has-xxs-font-size,
+h5.has-xs-font-size,
+h5.has-xxs-font-size,
+h6,
+h6.has-s-font-size,
+h6.has-xs-font-size,
+h6.has-xxs-font-size,
+h6.has-xxs-font-size {
+	@include font-h-1;
+}
+
+/* Paragraphs */
+p,
+ol,
+ul {
+	@include font-body-l;
+
+	&.has-background {
+		@include s-r-7(padding);
+	}
+
+	&.has-xxs-font-size {
+		@include font-body-2xs;
+	}
+
+	&.has-xs-font-size {
+		@include font-body-xs;
+	}
+
+	&.has-s-font-size {
+		@include font-body-s;
+	}
+
+	&.has-m-font-size {
+		@include font-body-m;
+	}
+
+	&.has-l-font-size {
+		@include font-body-l;
+	}
+
+	&.has-xl-font-size {
+		@include font-body-xl;
+	}
+
+	&.has-xxl-font-size {
+		@include font-body-2xl;
+	}
+
+	&.has-drop-cap:not(:focus):first-letter {
+		float: left;
+		@include font-body;
+		margin: 5px 8px 0 -8px;
+		line-height: 0.77;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 100px;
+
+		@include breakpoint(sm) {
+			font-size: 120px;
+			line-height: 0.77;
+			margin: 6px 12px 0 -8px;
+		}
+	}
+
+	&.intro.has-drop-cap:not(:focus):first-letter {
+		@include breakpoint(sm) {
+			font-size: 142px;
+		}
+	}
+}
+
+dfn,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+pre {
+	background: rgba(0, 0, 0, 0.15);
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-size: 15px;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+ins,
+mark {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Links */
+
+a {
+	color: currentColor;
+	text-decoration: underline;
+
+	p &,
+	blockquote:not(.has-text-color) .wp-block-pullquote__citation & {
+		color: $color__text_two;
+	}
+
+	h1,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		color: $color__text_one;
+	}
+
+	&:hover {
+		color: $color__primary;
+	}
+}
+
+.wp-block-image figcaption a,
+.wp-block-embed figcaption a,
+.wp-block-audio figcaption a {
+
+	&:hover {
+		color: $color__primary;
+	}
+}
+
+blockquote:not(.has-text-color) .wp-block-pullquote__citation a:hover {
+	color: $color__primary;
+}
+
+/* Elements */
+
+@media screen and (min-width: 50em) {
+
+	.editor-post-title:after,
+	.editor-post-title:before {
+		left: -200%;
+		width: 200%;
+	}
+
+	.editor-post-title:after {
+		display: none;
+	}
+
+	.editor-post-title>div:after,
+	.editor-post-title>div:before {
+		display: block;
+	}
+}
+
+.editor-post-title textarea {
+	background-color: transparent;
+}
+
+*,
+*:after,
+*:before {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ol,
+ul {
+	margin: 0 0 1.5em 3em;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul li,
+ol li {
+	padding-bottom: $s-4;
+}
+
+li>ol,
+li>ul {
+	margin-bottom: 0;
+	margin-left: $s-6;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+.image-border img {
+	border: 4px solid $color__border;
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+/* Forms */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/* Default Appender */
+
+.editor-default-block-appender .editor-default-block-appender__content {
+	@include font-body;
+	@include font-body-m;
+}
+
+/* Media */
+
+.wp-block-image figcaption,
+.wp-block-embed figcaption,
+.wp-block-audio figcaption {
+	max-width: 100%;
+	@include font-body-xs;
+	margin: 6px 0 0;
+	text-align: center;
+}
+
+.wp-block-gallery {
+	margin: 0;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+	padding: 40px 12px 8px;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+/* Quotes */
+
+.wp-block-pullquote,
+.wp-block-quote {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+
+	blockquote p {
+		@include font-body-m;
+	}
+
+	p:last-child,
+	blockquote p:last-child {
+		margin: 0;
+	}
+
+	&:not(.is-large):not(.is-style-large) {
+		border: none;
+	}
+
+	&.is-large,
+	&.is-style-large p {
+		margin: 0;
+		@include font-body-l;
+		font-style: normal;
+	}
+
+	cite,
+	footer,
+	.wp-block-quote__citation,
+	.wp-block-pullquote__citation {
+		display: block;
+		margin: 0;
+		padding: $s-4 0 0;
+		font-weight: bold;
+		font-style: normal;
+		text-transform: none;
+		@include font-body-xs;
+	}
+
+	cite,
+	footer,
+	.wp-block-quote__citation,
+	& blockquote:not(.has-text-color) .wp-block-pullquote__citation {
+		color: $color__text_two;
+	}
+}
+
+.wp-block-pullquote {
+	text-align: left;
+	@include border-radius-m;
+	color: $color__text_two;
+
+	&.is-style-solid-color {
+
+		&:not(.has-background) {
+			background: $color__background;
+		}
+
+		blockquote {
+			max-width: 100%;
+			padding: $s-6;
+			@include border-radius-m;
+
+			p {
+				@include font-body-m;
+			}
+		}
+	}
+
+	.alignleft blockquote,
+	.alignright blockquote {
+		padding: 0;
+	}
+}
+
+.wp-block[data-type="core/pullquote"][data-align="right"],
+.wp-block[data-type="core/pullquote"][data-align="left"] {
+	height: auto;
+	max-height: none;
+
+	&>.is-block-content {
+		max-width: $col3;
+	}
+}
+
+@media (min-width: 480px) {
+
+	.wp-block[data-type="core/pullquote"][data-align="right"],
+	.wp-block[data-type="core/pullquote"][data-align="left"] {
+		height: 0;
+	}
+}
+
+@media (min-width: 1360px) {
+
+	.wp-block[data-type="core/pullquote"][data-align="left"],
+	.wp-block[data-type="core/pullquote"][data-align="right"] {
+		margin: 0 auto;
+		max-width: $wide-content-width;
+	}
+}
+
+/* Group */
+
+.wp-block[data-align="full"] {
+
+	.wp-block-group {
+
+		.wp-block-group__inner-container {
+
+			.wp-block-image {
+				max-width: $default-content-width;
+			}
+		}
+
+	}
+}
+
+
+/* Table */
+
+.editor-styles-wrapper .wp-block-table {
+	display: table;
+	width: 100%;
+
+	.wp-block-table__cell-content {
+		padding: 1rem;
+	}
+
+	&.alignfull {
+		width: 96vw;
+	}
+
+	td {
+		border: none;
+		padding: 1rem;
+	}
+
+	table {
+		background: transparent;
+
+		tr {
+			padding: 1rem;
+			border-bottom: 1px solid $color__border;
+
+			&:last-of-type {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	&.is-style-stripes {
+		border-bottom: none;
+
+		tbody tr:nth-child(odd) {
+			background-color: $color__background;
+			border-bottom: none;
+		}
+
+		table tr {
+			border-bottom: none;
+		}
+	}
+}
+
+/* Cover */
+
+.wp-block-cover-image {
+	height: 75vh;
+	min-height: 400px;
+	@include s-r-8(margin-top);
+	@include s-r-8(margin-bottom);
+}
+
+.wp-block-cover-image-text,
+.wp-block-cover-image h2 {
+	max-width: $default-content-width;
+	@include font-h-3;
+}
+
+.wp-block-cover-image,
+.wp-block-cover {
+
+	.wp-block-cover__inner-container {
+		width: 100%;
+	}
+
+}
+
+/* Monospace */
+
+.wp-block-code .block-editor-plain-text {
+	background: $color__code_one;
+	color: $color__code_two;
+	@include font-code;
+	@include font-body-xs;
+	@include border-radius-m;
+	@include s-r-7(padding);
+
+	@include breakpoint(sm) {
+		margin-bottom: $s-7;
+	}
+
+	.block-editor-plain-text {
+		background: transparent;
+	}
+}
+
+.wp-block-preformatted {
+	background-color: $color__code_two;
+	color: $color__code_one;
+	max-width: 100%;
+	overflow: auto;
+	@include s-r-7(padding);
+	@include s-r-7(margin-bottom);
+	@include border-radius-m;
+	@include font-code;
+
+	& pre {
+		margin: 0;
+		padding: 0;
+		background-color: $color__code_two;
+		color: $color__code_one;
+	}
+}
+
+.wp-block[data-type="core/verse"] {
+	background: $color__background;
+	@include border-radius-m;
+	@include font-code;
+	@include font-body-xs;
+	@include font-regular;
+	@include s-r-7(padding);
+
+	pre {
+		background: transparent;
+	}
+}
+
+.wp-block-verse pre,
+pre.wp-block-verse {
+	color: $color__text_two;
+	white-space: nowrap;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1;
+	padding: 0;
+	overflow: auto;
+}
+
+/* Separator */
+.block-editor-block-list__block[data-type="core/separator"] {
+	max-width: $wide-content-width;
+}
+
+.wp-block-separator {
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-top: 1px solid;
+	opacity: 1;
+
+	&.is-style-wide {
+		border: none;
+	}
+
+	&.is-style-dots {
+		border: none;
+	}
+
+	&.is-style-dots:before {
+		color: $color__border;
+		@include font-body-l;
+		letter-spacing: 1em;
+		padding-left: 1em;
+	}
+}
+
+/* Buttons */
+
+.wp-block-button {
+
+	.wp-block-button__link {
+		@include btn;
+		@include btn-m;
+		@include btn-primary;
+		font-weight: normal;
+		color: $color__white;
+	}
+
+	&:not(.is-style-squared) .wp-block-button__link {
+		border-radius: 8px;
+	}
+
+	&.is-style-outline {
+
+		.wp-block-button__link {
+			@include btn-outline;
+			background: transparent;
+			box-shadow: none;
+			border: 1px solid;
+
+			&:hover {
+				color: $color__primary;
+				fill: $color__primary;
+			}
+		}
+	}
+}
+
+/* Block category Widgets */
+
+.wp-block-categories,
+.wp-block-latest-posts__post-date {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	@include s-r-9 (margin-bottom);
+}
+
+.wp-block-categories ul,
+.wp-block-latest-posts {
+	padding-left: 2.5em;
+}
+
+.wp-block-categories li,
+.wp-block-latest-posts li {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.wp-block-categories li a,
+.wp-block-latest-posts li a {
+	border: none;
+	text-decoration: none;
+	color: $color__text_two;
+}
+
+.wp-block[data-type="core/archives"] .wp-block-archives,
+.wp-block[data-type="core/latest-posts"] .wp-block-latest-posts {
+	margin: 0;
+	padding-left: 1.5rem;
+	@include font-body-m;
+}
+
+.wp-block[data-type="core/latest-comments"] .wp-block-latest-comments {
+	margin: 0;
+	padding: 0;
+
+	.wp-block-latest-comments__comment-excerpt p {
+		@include font-body-s;
+		margin: 0;
+	}
+}
+
+.wp-block[data-type="core/calendar"] {
+
+	caption {
+		color: $color__text_one;
+		margin-bottom: $s-4;
+		text-align: center;
+		@include font-bold;
+	}
+
+	table {
+
+		margin-bottom: $s-4;
+		background: $color__white;
+
+		th {
+			@include font-bold;
+			background: transparent;
+			text-align: center;
+		}
+
+		tbody {
+			color: $color__text_two;
+			border-right: 1px solid $color__border;
+		}
+
+		td#today {
+			background: $color__background;
+		}
+
+		tbody td,
+		th {
+			padding: 16px 8px;
+			border: 1px solid $color__border;
+			text-align: center;
+		}
+	}
+}
+
+/* Custom Color Palette */
+.has-primary-one-color {
+	color: $color__primary;
+	fill: $color__primary;
+}
+
+p.has-primary-one-color a {
+	text-decoration: underline;
+}
+
+.has-primary-one-background-color {
+	background: $color__primary;
+	border-color: $color__primary;
+}
+
+.has-text-one-color {
+	color: $color__text_one;
+	fill: $color__text_one;
+}
+
+.has-text-one-background-color {
+	background: $color__text_one;
+	border-color: $color__text_one;
+}
+
+.has-text-two-color {
+	color: $color__text_two;
+	fill: $color__text_two;
+}
+
+.has-text-two-background-color {
+	background: $color__text_two;
+	border-color: $color__text_two;
+}
+
+.has-border-color {
+	color: $color__border;
+	fill: $color__border;
+}
+
+.has-border-background-color {
+	background: $color__border;
+	border-color: $color__border;
+}
+
+.has-background-color {
+	color: $color__background;
+	fill: $color__background;
+}
+
+.has-background-background-color {
+	background: $color__background;
+	border-color: $color__background;
+}
+
+.has-white-color {
+	color: $color__white;
+	fill: $color__white;
+}
+
+.has-white-background-color {
+	background: $color__white;
+	border-color: $color__white;
+}
+
+.has-black-color {
+	color: $color__black;
+	fill: $color__black;
+}
+
+.has-black-background-color {
+	background: $color__black;
+	border-color: $color__black;
+}
+
+/* Custom Gradients Palette */
+.has-grayish-blue-to-dark-grayish-blue-gradient-background {
+	background: linear-gradient(0deg, rgb(91, 108, 114) 0%, rgb(60, 68, 72) 100%);
+}
+
+.has-soft-orange-to-desaturated-dark-cyan-gradient-background {
+	background: linear-gradient(270deg, rgb(67, 92, 103) 0%, rgb(114, 164, 163) 46%, rgb(251, 162, 137) 74%, rgb(252, 202, 164) 100%);
+}
+
+.has-light-grayish-magenta-to-very-dark-grayish-pink-gradient-background {
+	background: linear-gradient(0deg, rgb(237, 221, 237) 0%, rgb(230, 196, 223) 21%, rgb(196, 165, 191) 50%, rgb(112, 93, 99) 100%);
+}
+
+.has-light-grayish-red-to-dark-red-gradient-background {
+	background: linear-gradient(0deg, rgb(143, 34, 40) 0%, rgb(250, 110, 115) 50%, rgb(219, 191, 193) 100%);
+}
+
+.has-slightly-desaturated-cyan-to-very-soft-red-gradient-background {
+	background: linear-gradient(0deg, rgb(129, 195, 198) 0%, rgb(251, 198, 167) 48%, rgb(250, 168, 182) 100%);
+}
+
+.has-very-soft-orange-to-very-soft-pink-gradient-background {
+	background: radial-gradient(circle at bottom, rgb(251, 219, 190) 0%, rgb(252, 170, 161) 26%, rgb(250, 152, 162) 54%, rgb(246, 182, 211) 75%, rgb(250, 232, 243) 100%);
+}
+
+.has-grayish-violet-to-soft-orange-gradient-background {
+	background: linear-gradient(180deg, rgb(173, 160, 191) 0%, rgb(225, 205, 236) 29%, rgb(243, 206, 225) 51%, rgb(241, 196, 141) 72%, rgb(240, 193, 97) 100%);
+}
+
+.has-light-grayish-red-to-dark-grayish-blue-gradient-background {
+	background: linear-gradient(180deg, rgb(252, 202, 210) 0%, rgb(222, 158, 167) 46%, rgb(118, 119, 135) 100%);
+}
+
+.has-light-grayish-red-to-very-soft-blue-gradient-background {
+	background: linear-gradient(135deg, rgb(237, 204, 211) 0%, rgb(177, 181, 225) 100%);
+}
+
+.has-soft-blue-to-lime-green-gradient-background {
+	background: linear-gradient(0deg, rgb(104, 134, 254) 0%, rgb(255, 255, 255) 49%, rgb(255, 255, 255) 61%, rgb(213, 233, 207) 75%, rgb(8, 179, 82) 100%);
+}
+
+.has-soft-blue-to-dark-moderate-violet-gradient-background {
+	background: linear-gradient(135deg, rgb(103, 125, 239) 0%, rgb(117, 72, 166) 100%);
+}
+
+.has-soft-red-to-very-soft-blue-gradient-background {
+	background: linear-gradient(0deg, rgb(250, 110, 90) 0%, rgb(255, 202, 192) 24%, rgb(255, 255, 255) 48%, rgb(255, 255, 255) 62%, rgb(223, 227, 255) 77%, rgb(157, 144, 250) 100%);
+}
+
+.has-dark-blue-to-mostly-black-blue-gradient-background {
+	background: radial-gradient(circle at bottom, rgb(19, 20, 143) 0%, rgb(13, 11, 24) 100%);
+}
+
+.has-very-soft-blue-to-dark-grayish-blue-gradient-background {
+	background: radial-gradient(circle at bottom, rgb(153, 203, 233) 0%, rgb(121, 132, 157) 100%);
+}
+
+.has-soft-pink-to-mostly-pure-orange-gradient-background {
+	background: radial-gradient(circle at bottom, rgb(253, 79, 156) 0%, rgb(254, 132, 0) 100%);
+}
+
+.has-bright-cyan-to-soft-magenta-gradient-background {
+	background: linear-gradient(0deg, rgb(48, 203, 247) 0%, rgb(254, 128, 254) 100%);
+}
+
+.has-light-red-to-very-light-pink-gradient-background {
+	background: linear-gradient(90deg, rgb(255, 131, 92) 0%, rgb(255, 148, 193) 100%);
+}
+
+.has-very-soft-violet-to-very-soft-pink-gradient-background {
+	background: linear-gradient(90deg, rgb(198, 163, 245) 0%, rgb(248, 162, 199) 100%);
+}

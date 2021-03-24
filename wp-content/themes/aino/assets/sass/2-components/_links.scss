@@ -1,0 +1,90 @@
+a {
+	color: inherit;
+
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}
+
+/* Primary Links */
+.entry-content p a,
+.entry-content li a,
+.authorbox__content p a,
+.comment-content li a,
+.comment-content p a,
+.wp-caption-text a,
+cite a,
+.wp-block-image figcaption a,
+.wp-block-audio figcaption a,
+.wp-block-embed figcaption a {
+	color: currentColor;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.page .entry-content .wp-block-group.has-link-color p a:hover,
+.page .entry-content p.has-link-color a:hover {
+	color: var(--wp--style--color--link);
+}
+
+/* Links that keep the default text color and only show link color on hover */
+.site-title a,
+h2.entry-title a,
+.comment-list b.fn a,
+.main-navigation a {
+	color: $color__text_one;
+	fill: $color__text_one;
+}
+
+.posts-container .hentry .entry-meta a,
+.entry-comments a,
+.posted-on a,
+.comment-reply-title #cancel-comment-reply-link {
+	color: $color__text_two;
+	fill: $color__text_two;
+}
+
+/* Link Hovers */
+.header-cta-wrap a,
+.footer-widget-wrap li a,
+.site-info a,
+.site-footer a.back-top {
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Meta Textlink Hovers */
+h1, h2, h3, h4, h5, h6,
+.entry-meta,
+.related-post .entry-cats {
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+}
+
+/* Link Transitions */
+.site-branding a,
+.primary-menu a,
+.site-footer .widget_mc4wp_form_widget a,
+.site-footer a,
+.social-header-nav .icon,
+.social-footer-nav .icon,
+.sd-social-icon .sd-content ul li[class*='share-'] a {
+	@include transition-default;
+}
+
+.entry-link,
+.entry-link img,
+.navigation .nav-thumb {
+	@include transition-posthover;
+}

@@ -1,0 +1,46 @@
+
+ table {
+	 border-collapse: collapse;
+	 width: 100%;
+	 background-color: $color__background;
+	 margin-top: 0;
+	 margin-left: 0;
+	 margin-right: 0;
+	 @include s-r-8(margin-bottom);
+ }
+
+ thead th {
+	 border-bottom: 2px solid $color__border;
+	 padding-bottom: $s-4;
+	 @include breakpoint(sm) {
+		 margin: 0 0 $s-4;
+	 }
+ }
+
+ th {
+	 padding: $s-4;
+	 text-align: left;
+	 @include breakpoint(sm) {
+		 padding: $s-4;
+	 }
+ }
+
+ tr {
+	 border-bottom: 1px solid $color__border;
+ }
+
+ table tr:last-of-type {
+	 border-bottom: none;
+ }
+
+ td {
+	 padding: $s-4;
+	 border-right: 1px solid $color__border;
+	 @include breakpoint(sm) {
+		 padding: $s-4;
+	 }
+ }
+
+ tr td:last-of-type {
+	 border-right: none;
+ }

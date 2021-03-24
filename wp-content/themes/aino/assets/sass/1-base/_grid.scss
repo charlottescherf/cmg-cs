@@ -1,0 +1,303 @@
+.col,
+.column {
+	box-sizing: border-box;
+}
+
+.no-gutter {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.desktop__overlap-top {
+
+	@include breakpoint(sm) {
+		margin-top: -12rem;
+	}
+}
+
+// 12 grid columns
+.col1 {
+	max-width: $col1;
+
+	&.no-margins {
+		max-width: calc(#{$col1} - #{$s-9});
+	}
+}
+
+.col2 {
+	max-width: $col2;
+
+	&.no-margins {
+		max-width: calc(#{$col2} - #{$s-9});
+	}
+}
+
+.col3 {
+	max-width: $col3;
+
+	&.no-margins {
+		max-width: calc(#{$col3} - #{$s-9});
+	}
+}
+
+.col4 {
+	max-width: $col4;
+
+	&.no-margins {
+		max-width: calc(#{$col4} - #{$s-9});
+	}
+}
+
+.col5 {
+	max-width: $col5;
+
+	&.no-margins {
+		max-width: calc(#{$col5} - #{$s-9});
+	}
+}
+
+.col6 {
+	max-width: $col6;
+
+	&.no-margins {
+		max-width: calc(#{$col6} - #{$s-9});
+	}
+}
+
+.col7 {
+	max-width: $col7;
+
+	&.no-margins {
+		max-width: calc(#{$col7} - #{$s-9});
+	}
+}
+
+.col8 {
+	max-width: $col8;
+
+	&.no-margins {
+		max-width: calc(#{$col8} - #{$s-9});
+	}
+}
+
+.col9 {
+	max-width: $col9;
+
+	&.no-margins {
+		max-width: calc(#{$col9} - #{$s-9});
+	}
+}
+
+.col10 {
+	max-width: $col10;
+
+	&.no-margins {
+		max-width: calc(#{$col10} - #{$s-9});
+	}
+}
+
+.col11 {
+	max-width: $col11;
+
+	&.no-margins {
+		max-width: calc(#{$col11} - #{$s-9});
+	}
+}
+
+.col12 {
+	max-width: $col12;
+
+	&.no-margins {
+		max-width: calc(#{$col12} - #{$s-9});
+	}
+}
+
+.outer-margins {
+	@include outer-margins;
+}
+
+// Outer margins for elements which only require them on mobile.
+.mobile-margins {
+	padding-left: $s-4;
+	padding-right: $s-4;
+
+	@include breakpoint(lg) {
+		padding-left: $s-6;
+		padding-right: $s-6;
+	}
+
+	@include breakpoint(xl) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Outer Grid margins for elements with default content width.
+.default-margins,
+.search-no-results .entry-content {
+	@include default-margins;
+}
+
+.col-margins {
+	@include col-margins;
+}
+
+/* Centered elements */
+.push-center,
+.center {
+	@include push--auto;
+}
+
+/* Padding top and padding bottom for blocks */
+.has-padding-top {
+	@include s-r-14 (padding-top);
+}
+
+.has-padding-bottom {
+	@include s-r-14 (padding-bottom);
+}
+
+/* Pages with 12 column max-width */
+.header-inner,
+.archive .site-content,
+.blog .site-content,
+.error404 .site-content,
+.search .site-content,
+.single-post .site-content {
+	@include push--auto;
+
+	@include breakpoint(xl) {
+		max-width: $col12;
+	}
+}
+
+/* Default content width */
+.entry-content>*,
+.single .entry-tags,
+.comment-list,
+.comment-respond,
+.authorbox__details,
+.author-pic-link,
+.default-content-width {
+	@include push--auto;
+	max-width: $default-content-width;
+}
+
+/* Full width page template */
+.tpl-fullwidth .entry-content>*,
+.tpl-fullwidth .entry-header {
+	@include push--auto;
+	max-width: $wide-content-width;
+}
+
+/* Fullscreen and hero page template */
+.tpl-fullscreen .entry-content>*,
+.tpl-fullscreen .entry-header,
+.tpl-hero .entry-content>*,
+.tpl-hero .entry-header {
+	@include push--auto;
+	max-width: 100%;
+}
+
+/* Alignwide and fullwidth Content widths */
+.entry-content>*.alignwide {
+	max-width: $wide-content-width;
+}
+
+// All containers with 1200px default width.
+.tpl-fullwidth .entry-header,
+.tpl-fullwidth .hentry .entry-content {
+	padding-left: $s-6;
+	padding-right: $s-6;
+
+	@include breakpoint(sm) {
+		padding-left: $s-9;
+		padding-right: $s-9;
+	}
+
+	@include breakpoint(md) {
+		padding-left: $s-6;
+		padding-right: $s-6;
+	}
+
+	.alignwide {
+		@include breakpoint(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@include breakpoint(md) {
+			padding-left: $s-6;
+			padding-right: $s-6;
+		}
+	}
+}
+
+/* Grid Columns */
+.posts-container {
+	@include flexbox;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.col,
+.posts-container .type-page,
+.posts-container .type-post {
+	position: relative;
+}
+
+/* Blog Post Columns */
+/* 1-Column */
+.blog-1-column .posts-container .type-page,
+.blog-1-column .posts-container .type-post,
+.footer-1-column .footer-widget {
+	width: 100%;
+	flex-grow: 0;
+	flex-basis: 100%; // 1-column on mobile
+	clear: both;
+	float: none;
+}
+
+.blog-1-column .posts-container .hentry {
+	width: 100%;
+	float: none;
+}
+
+/* 2-Columns */
+.blog-2-column .posts-container .hentry,
+.posts-container .hentry,
+.s6,
+.single-post .related-post,
+.single-post .related-post,
+.single-post .navigation .next,
+.single-post .navigation .prev {
+	width: 100%; // 1-column on mobile
+	flex-grow: 0;
+	@include col-margins;
+
+	@include breakpoint(sm) {
+		flex-basis: calc(50% - 2rem);
+	}
+
+	@include breakpoint(lg) {
+		flex-basis: calc(50% - 3rem);
+	}
+}
+
+/* 3-Columns */
+.blog-3-column .posts-container .hentry,
+.header-infobar .col,
+.s4 {
+	width: 100%;
+	flex-grow: 0;
+	@include col-margins;
+
+	@include breakpoint(sm) {
+		flex-basis: calc(50% - 2rem);
+	}
+
+	@include breakpoint(lg) {
+		flex-basis: calc(33.333% - 3rem);
+	}
+}
